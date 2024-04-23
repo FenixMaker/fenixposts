@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'render/index'
   mount SolidusStripe::Engine, at: '/solidus_stripe'
   mount SolidusAdmin::Engine, at: '/admin', constraints: lambda { |req|
     req.cookies['solidus_admin'] != 'false' &&
@@ -26,5 +27,5 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root 'render#index'
 end
