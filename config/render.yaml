@@ -1,6 +1,6 @@
 databases:
   - name: fenixposts
-    databaseName: fenixposts
+    databaseName: fenixposts_production
     user: fenixposts
     plan: free
 
